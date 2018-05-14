@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files (x86)\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run pug
+  C:\Program Files (x86)\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add gulp-sass -D
 
 PATH: 
-  C:\Users\Admin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Admin\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\nodejs;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Admin\AppData\Local\Yarn\bin;C:\Python27;C:\Users\Admin\AppData\Roaming\npm;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\atom\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Admin\AppData\Local\Yarn\bin;C:\Python27;C:\Users\Admin\AppData\Roaming\npm;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\atom\bin
 
 Yarn version: 
   1.5.1
@@ -15,15 +15,15 @@ Platform:
 
 npm manifest: 
   {
-    "name": "restaurant",
+    "name": "AnBien restaurant",
     "version": "1.1.0",
     "description": "AnBien Restaurant - Hai Phong in a bowl",
     "main": "gulpfile.js",
-    "repository": "https://github.com/leenguyenz/Anbien-Restaurant.git",
+    "repository": "https://github.com/leenguyenz/AnbienRestaurant-v2.git",
     "author": "Leenguyenz",
     "license": "MIT",
     "devDependencies": {
-      "bootstrap": "4.0.0-alpha.5",
+      "bootstrap": "^4.0.0-alpha.5",
       "gulp": "^3.9.1"
     },
     "dependencies": {
@@ -1866,14 +1866,11 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command "pug" not found.
+  Error: package.json: Name contains illegal characters
       at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:87307:17
+      at module.exports.exports.default (C:\Program Files (x86)\Yarn\lib\cli.js:37549:13)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:52434:51
       at Generator.next (<anonymous>)
       at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:116:14
-      at new Promise (<anonymous>)
-      at new F (C:\Program Files (x86)\Yarn\lib\cli.js:23451:28)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:95:12
-      at runCommand (C:\Program Files (x86)\Yarn\lib\cli.js:87312:22)
-      at Object.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:87412:14)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>

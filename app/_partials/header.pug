@@ -1,0 +1,108 @@
+header
+	.topheader
+		.container
+			.row
+				.col-xs-12.col-md-6.text-xs-center.text-md-left
+					span.topheader-social
+						a(href='')
+							i.fa.fa-facebook(title='facebook')
+						a(href='')
+							i.fa.fa-youtube-play(title='youtube')
+						a(href='')
+							i.fa.fa-twitter(title='twitter')
+						a(href='')
+							i.fa.fa-google-plus(title='google plus')
+					span.topheader-hotline Hotline: 0978-485-325
+				.col-xs-12.col-md-6.text-xs-center.text-md-right
+					span.topheader-opening Giờ mở cửa: 8:00 am — 10:00 pm
+					span.topheader-cart
+						a(href='assets/page/shopping-cart.html')
+							i.fa.fa-shopping-bag
+					span.topheader-account
+						a(href='') Đăng nhập
+					span.account-info
+						img(src='assets/images/account.jpg', alt='')
+						a.account-info-name(href='') Lee Nguyen
+						span.account-info-manager
+							a.account-manager(href='') Quản lý tài khoản
+							a.log-out(href='') Đăng xuất
+	// .topheader
+	.account
+		.account-blur
+		.account-box
+			.inner-box
+				.account-box-signup
+					h3 Sign up
+					i.fa.fa-times-circle-o.x
+					form(action='index.html', method='post')
+						.form-group
+							label(for='username') Username
+							input#username.form-control(type='text', placeholder='myusername90')
+							i.fa.fa-user
+						.form-group
+							label(for='email') Email
+							input#email.form-control(type='email', placeholder='myemail@mail.com')
+							i.fa.fa-envelope-o
+						.form-group
+							label(for='password') Mật khẩu
+							input#password.form-control(type='password', placeholder='eg. 136X#4adh2')
+							i.fa.fa-key
+						.form-group
+							label(for='repassword') Nhập lại mật khẩu
+							input#repassword.form-control(type='password', placeholder='eg. 136X#4adh2')
+							i.fa.fa-key
+						button.button-reservation(type='submit') Đăng ký
+					.text-xs-right
+						p
+							| Bạn là thành viên ? 
+							span.go-login Đăng nhập ngay
+				.account-box-login
+					h3 Login
+					i.fa.fa-times-circle-o.x
+					form(action='index.html', method='post')
+						.form-group
+							label(for='user') Username
+							input#user.form-control(type='text', placeholder='myusername')
+							i.fa.fa-user
+						.form-group
+							label(for='pass') Mật khẩu
+							input#pass.form-control(type='password', placeholder='eg. 136X#4adh2')
+							i.fa.fa-key
+						.form-group
+							input#keep-login(type='checkbox')
+							label.keep-login(for='keep-login')  Keep me logged in
+						button.login.button-reservation(type='submit') Đăng nhập
+					.text-xs-right
+						p
+							| Bạn chưa là thành viên? 
+							span.join-us Đăng ký ngay
+	nav.navbar
+		.container.clearfix
+			.logo
+				a.logo-brand(href='index.html')
+					img.img-fluid(src='assets/images/logo.jpg', alt='')
+			i.fa.fa-bars.float-xs-right
+			ul.float-xs-right
+				li.closer
+					i.fa.fa-times
+				li.logo-mobile
+					a.logo-brand(href='index.html')
+						img.img-fluid(src='assets/images/logo-anbien.png', alt='')
+				li
+					a.active(href='index.html') Home
+				li
+					a(href='assets/page/about.html') Giới thiệu
+				li
+					a(href='assets/page/reservation.html') Đặt bàn
+				li
+					a(href='assets/page/menu.html') Thực đơn
+				li
+					a(href='assets/page/shop.html') Đặt món
+				li
+					a(href='assets/page/gallery.html') Gallery
+				li
+					a(href='assets/page/blog.html') Blog
+				li
+					a(href='assets/page/contact.html') Liên hệ
+				li
+					a.button-reservation.laclu(href='assets/page/reservation.html') Đặt bàn

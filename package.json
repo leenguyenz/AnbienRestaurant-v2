@@ -1,13 +1,13 @@
 {
-  "name": "restaurant",
+  "name": "AnBien restaurant",
   "version": "1.1.0",
   "description": "AnBien Restaurant - Hai Phong in a bowl",
   "main": "gulpfile.js",
-  "repository": "https://github.com/leenguyenz/Anbien-Restaurant.git",
+  "repository": "https://github.com/leenguyenz/AnbienRestaurant-v2.git",
   "author": "Leenguyenz",
   "license": "MIT",
   "devDependencies": {
-    "bootstrap": "4.0.0-alpha.5",
+    "bootstrap": "^4.0.0-alpha.5",
     "gulp": "^3.9.1"
   },
   "dependencies": {
