@@ -5,12 +5,17 @@
 var gulp = require('gulp'),
 	path = require('path'),
 	pug = require('gulp-pug'),
-	data = require('gulp-data');
+	data = require('gulp-data'),
+	sass = require('gulp-sass'),
+	prefix = require('gulp-autoprefixer');
+
 
 //Directories paths
 var paths = {
 	public: './public/',
-	data: './app/_data/'
+	data: './app/_data/',
+	sass: './app/scss/',
+	css: './public/css/'
 }
 
 // Pug task
@@ -25,4 +30,18 @@ gulp.task('pug', function () {
 			this.emit('end');
 		})
 		.pipe(gulp.dest(paths.public));
+})
+
+//sass task
+gulp.task('sass', function(){
+	return gulp.src(paths.sass + 'style.scss')
+		.pipe(sass({
+			includePaths: [paths.sass],
+			outputStyle: 'compressed'
+		}))
+		.on('error', sass.logError)
+		.pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+			cascade: true
+		}))
+		.pipe(gulp.dest(paths.css));
 })
