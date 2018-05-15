@@ -7,14 +7,22 @@ var gulp = require('gulp'),
 	pug = require('gulp-pug'),
 	data = require('gulp-data');
 
-//Directories path
-var path = {
-	dist: './dist/',
-	data: './app/_data'
+//Directories paths
+var paths = {
+	public: './public/',
+	data: './app/_data/'
 }
 
+// Pug task
 gulp.task('pug', function () {
 	return gulp.src('./app/*.pug')
-	.pipe(pug())
-	.pipe(gulp.dest('./dist'));
+		.pipe(data(function (file){
+			return require(paths.data + path.basename(file.path) + '.json');
+		}))
+		.pipe(pug())
+		.on('error', function (err) {
+			process.stderr.write(err.message + '\n');
+			this.emit('end');
+		})
+		.pipe(gulp.dest(paths.public));
 })
