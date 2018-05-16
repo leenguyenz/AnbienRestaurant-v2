@@ -1,24 +1,21 @@
 //Reset CSS
-@import "normalize";
+@import "includes/reset";
 
 //Variables CSS
-@import "var";
+@import "includes/var";
 
 // CSS Global HTML/Body/a...
-@import "global";
+@import "includes/global";
 
 // Typography
-@import "typography";
+@import "includes/typography";
 
 // hover/button/slide...
-@import "modules";
+@import "includes/modules";
 
 // Responsive website
-@import "desktop_large";
-@import "desktop";
-@import "tablet_large";
-@import "tablet";
-@import "mobile";
-
-
-
+@import "responsive/desktop_large";
+@import "responsive/desktop";
+@import "responsive/tablet_large";
+@import "responsive/tablet";
+@import "responsive/mobile";
