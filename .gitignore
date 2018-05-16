@@ -1,6 +1,7 @@
-.idea
+# Dependency directories
 node_modules
-.sass-cache
-*.thumb
-npm-debug.log
 public/
+# .idea
+# .sass-cache
+# *.thumb
+# npm-debug.log
