@@ -1,7 +1,5 @@
 ## An Bien Restaurant project.
 
-[![Build Status][travis-image]][travis-url]
-
 This is a HTML5/Pug/Sass/Bootstrap4/Jquery project using Gulpjs for task automation.
 
 ### Note
