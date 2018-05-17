@@ -13,5 +13,6 @@ This project uses...
 5. [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer) to add vendor prefixes to css files
 
 ### To run
+- After clone repository, you must verified have node installed on your machine: node -v on CLI.
 - Execute `npm install` from this directory to install dev dependencies.
 - Execute `gulp` to run all tasks, launch the browser sync local server and watch for changes.
