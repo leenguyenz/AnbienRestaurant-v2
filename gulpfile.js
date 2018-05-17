@@ -9,8 +9,10 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	prefix = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync'),
-	clean = require('gulp-clean');
-
+	clean = require('gulp-clean'),
+	imagemin = require('gulp-imagemin'),
+	sourcemaps = require('gulp-sourcemaps'),
+	uglify = require('gulp-uglify');
 
 //Directories paths
 var paths = {
@@ -53,58 +55,40 @@ gulp.task('pug', function () {
 })
 
 /**
- * Wait for pug and sass tasks, then launch the browser-sync Server
- */
- gulp.task('browser-sync', ['lib', 'sass', 'pug', 'images', 'js', 'fonts'], function (){
- 	browserSync({
- 		server: {
- 			baseDir: paths.public
- 		},
- 		notify: false
- 	});
- });
-/**
  * Compile .scss files into public css directory With autoprefixer no
  * need for vendor prefixes then live reload the browser.
  */
 gulp.task('sass', function(){
 	return gulp.src(paths.sass + 'style.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			includePaths: [paths.sass],
 			outputStyle: 'compressed'
 		}))
 		.on('error', sass.logError)
+		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
 			cascade: true
 		}))
+		.pipe(sourcemaps.write('../maps/css/'))
 		.pipe(gulp.dest(paths.css))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
 
-// task to images clean
-gulp.task('images-clean', function(){
-	return gulp.src([paths.images], {read:false})
-	.pipe(clean());
-});
-
-gulp.task('images', ['images-clean'], function () {
+gulp.task('images', function () {
 	return gulp.src(paths.originImages)
-	.pipe(gulp.dest(paths.images))
-	.pipe(browserSync.reload({
-		stream: true
-	}));
-});
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.images))
+		.pipe(browserSync.reload({
+			stream: true
+	}))
+})
 
-// task to JS clean
-gulp.task('js-clean', function(){
-	return gulp.src([paths.js], {read:false})
-	.pipe(clean());
-});
-
-gulp.task('js', ['js-clean'], function () {
+gulp.task('js', function () {
 	return gulp.src(paths.originJS)
+	.pipe(uglify())
 	.pipe(gulp.dest(paths.js))
 	.pipe(browserSync.reload({
 		stream: true
@@ -140,12 +124,28 @@ gulp.task('fonts', ['fonts-clean'], function () {
 });
 
 /**
+ * Wait for pug and sass tasks, then launch the browser-sync Server
+ */
+ gulp.task('browser-sync', ['lib', 'sass', 'pug', 'images', 'js', 'fonts'], function (){
+ 	browserSync({
+ 		server: {
+ 			baseDir: paths.public
+ 		},
+ 		notify: false
+ 	});
+ });
+
+
+/**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
  gulp.task('watch', function () {
  	gulp.watch(paths.sass + '**/*.scss', ['sass']);
  	gulp.watch('./app/**/*.pug', ['rebuild']);
+ 	gulp.watch(paths.originImages, ['images']);
+ 	gulp.watch(paths.originJS, ['js']);
+
  });
 
  // Build task compile sass and pug.
