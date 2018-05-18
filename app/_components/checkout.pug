@@ -1,19 +1,122 @@
-extends _layouts/home
-
-block head_end
-    //-vendor css
-    link(href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-    //- style css
-    link(href="/css/style.css" rel="stylesheet")
-
-block content
-    include _partials/header
-    include _partials/back-top
-    include _components/checkout
-    include _partials/footer
-
-block body_end
-    script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='lib/jquery/jquery.min.js')
-    script(src='lib/wowjs/wow.min.js')
-    script(src="js/script.js" type="text/javascript")
+section#checkoutpage
+    article.menu-intro
+        h2.menu-intro-title Hand-Crafted Dishes Sourced
+        h3.menu-intro-text Checkout
+    section.checkout
+        .container
+            article.checkout-customer
+                .checkout-customer-login.clearfix.mb-2
+                    .title Returning Customer ?
+                    a.button-reservation(href='') click here to login
+                .checkout-customer-login.clearfix
+                    .title Have a Coupon ?
+                    a.button-reservation(href='') click here to enter your code
+            article.checkout-billing
+                .row
+                    .col-xs-12.col-lg-6
+                        .checkout-billing-detail
+                            .title Billing Details
+                            form(action='checkout.html', method='post')
+                                .row
+                                    .col-xs-12.col-md-6.form-group
+                                        input.form-control(type='text', placeholder='First Name')
+                                    .col-xs-12.col-md-6.form-group
+                                        input.form-control(type='text', placeholder='Last Name')
+                                    .col-xs-12.col-md-6.form-group
+                                        input.form-control(type='email', placeholder='Email')
+                                    .col-xs-12.col-md-6.form-group
+                                        input.form-control(type='number', placeholder='Phone')
+                                    .col-xs-12.form-group
+                                        textarea.form-control(name='address', placeholder='Address')
+                                    .col-xs-12.form-group
+                                        select(name='thanhpho')
+                                            option(value='choose', selected='') Chọn thành phố...
+                                            option(value='hanoi') Hà Nội
+                                            option(value='haiphong') Hải Phòng
+                                            option(value='danang') Đà Nẵng
+                                            option(value='hochiminh') TP Hồ Chí Minh
+                                    .checkbox.col-xs-12
+                                        input#create-account(type='checkbox')
+                                        label(for='create-account') Creat an account?
+                    .col-xs-12.col-lg-6
+                        .checkout-billing-ship
+                            .title Ship To a Different Address?
+                            .form-group
+                                input.form-control(type='text', placeholder='Chane Your Shipping Address Here . . .')
+            article.shopping-table
+                .shopping-table-title Your Order Summary
+                .table-inner
+                    table
+                        thead
+                            tr
+                                th PRODUCT
+                                th PRICE
+                                th QUANTITY
+                                th TOTAL
+                                th
+                                    i.fa.fa-trash-o
+                        tbody
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4 CAFFEE AMERICANO 1
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4 CAFFEE AMERICANO 2
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4 CAFFEE AMERICANO 3
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+            article.checkout-payment
+                .checkout-payment-title Direct Bank Transfer
+                form(action='checkout.html', method='post')
+                    .form-group
+                        input#transfer(type='radio', name='payment', value='Banktransfer')
+                        label(for='transfer')
+                            | Direct Bank Transfer
+                            small
+                                | Make your payment directly into our bank account. Please use your Order ID as the payment reference
+                    .form-group
+                        input#cheque(type='radio', name='payment', value='Banktransfer')
+                        label(for='cheque')
+                            | Cheque Payment
+                            small
+                                | Make your payment directly into our bank account. Please use your Order ID as the payment reference
+                    .form-group
+                        input#cash(type='radio', name='payment', value='Banktransfer')
+                        label(for='cash')
+                            | Cash on Delivery
+                            small
+                                | Make your payment directly into our bank account. Please use your Order ID as the payment reference
+                    button.button-reservation(type='submit') place order

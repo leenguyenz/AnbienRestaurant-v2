@@ -1,21 +1,89 @@
-extends _layouts/home
-
-block head_end
-    //-vendor css
-    link(href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-    link(href="lib/owlcarousel/owl.carousel.css" rel="stylesheet")
-    //- style css
-    link(href="/css/style.css" rel="stylesheet")
-
-block content
-    include _partials/header
-    include _partials/back-top
-    include _components/shoppingcart
-    include _partials/footer
-
-block body_end
-    script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='lib/jquery/jquery.min.js')
-    script(src='lib/owlcarousel/owl.carousel.js')
-    script(src='lib/wowjs/wow.min.js')
-    script(src="js/script.js" type="text/javascript")
+section#shoppingpage
+    section.shopping
+        article.menu-intro
+            h2.menu-intro-title Hand-Crafted Dishes Sourced
+            h3.menu-intro-text Cart Page
+        article.shopping-table
+            .container
+                .table-innner
+                    table
+                        thead
+                            tr
+                                th PRODUCT
+                                th PRICE
+                                th QUANTITY
+                                th TOTAL
+                                th
+                                    i.fa.fa-trash-o
+                        tbody
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4
+                                        a(href='product.html') CAFFEE AMERICANO 1
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4
+                                        a(href='product.html') CAFFEE AMERICANO 2
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+                            tr
+                                td.product-name.clearfix
+                                    a(href='')
+                                        img.imgfluid(src='../images/shopping-thumb-1.jpg', alt='')
+                                    h4
+                                        a(href='product.html') CAFFEE AMERICANO 3
+                                td.product-price $ 550.00
+                                td.count
+                                    .count-inner
+                                        a.times(href='') -
+                                        input(type='text', value='1')
+                                        a.plus(href='') +
+                                td.product-price $ 550.00
+                                td.delete
+                                    i.fa.fa-times-circle
+        article.shopping-cart
+            .container
+                .row
+                    .col-xs-12.col-md-6
+                        .coupon
+                            .coupon-title GOT A COUAPON
+                            .coupon-form
+                                input.form-control(type='text', placeholder='Coupon code')
+                                button.button-reservation(type='submit') Coupon Code
+                    .col-xs-12.col-md-6
+                        .total
+                            .total-title Cart Totals
+                            .total-sub.clearfix
+                                span.total-sub-title.float-xs-left Tạm tính
+                                span.total-sub-price.float-xs-right $110
+                            .total-sub.clearfix
+                                span.total-sub-title.float-xs-left Giảm giá
+                                span.total-sub-price.float-xs-right
+                                    | -0 
+                                    sup đ
+                            .total-main.clearfix
+                                span.total-main-title.float-xs-left Tổng tiền
+                                span.total-main-price.float-xs-right $250
+                        .shopping-button.clearfix
+                            a.update.button-reservation(href='') UPDATE CART
+                            a.checkout.button-reservation(href='checkout.html') TIẾN HÀNH THANH TOÁN

@@ -1,19 +1,181 @@
-extends _layouts/home
-
-block head_end
-    //-vendor css
-    link(href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-    //- style css
-    link(href="/css/style.css" rel="stylesheet")
-
-block content
-    include _partials/header
-    include _partials/back-top
-    include _components/post
-    include _partials/footer
-
-block body_end
-    script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='lib/jquery/jquery.min.js')
-    script(src='lib/wowjs/wow.min.js')
-    script(src="js/script.js" type="text/javascript")
+section#postpage
+    article.post
+        .container
+            .row
+                .blog-intro.col-xs-12.text-xs-center
+                    .blog-intro-title Tips For New Dishes
+                    .blog-intro-text News Details
+                .blog-posts.col-xs-12.col-sm-12.col-md-8.col-lg-9
+                    .blog-item
+                        a(href='')
+                            img.img-fluid(src='../images/news-4.jpg', alt='')
+                        .blog-item-box
+                            h2.blog-item-box-title
+                                a(href='') Ingredients For Cooking Pasta With Creamy Mushroom
+                            h4.blog-item-box-date
+                                | 10 June 2016
+                                span.author by Peter Parker
+                            p.blog-item-box-text
+                                | Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra.
+                            p
+                                | Incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,Yes, these are the things I think about
+                            h3 What Make The Specialities And Desserts ?
+                            p
+                                | Dinner usually refers to the most significant and important meal of the day, which can be the noon or the evening meal. It may mean a meal of any size eaten at any time of day. The meaning as the evening meal, generally the largest of the day A dinner party is a social gathering at which people congregate to eat dinner. During the times of Ancient Rome, a dinner party was referred to as a convivia.
+                            img(src='../images/news-5.jpg', alt='')
+                            img(src='../images/news-6.jpg', alt='')
+                            p
+                                | Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam eius modi tempra.
+                            p
+                                | Dinner usually refers to the most significant and important meal of the day, which can be the noon or the evening meal. It may mean a meal of any size eaten at any time of day.
+                            h3 What Make The Ingeridents And Cooking ?
+                            ul
+                                li
+                                    | Tatemesa quiau voluptas sit aspernatur aut odit aut fugit be thought of as magic bullets for creativity.
+                                li
+                                    | Accusanteum reqw dol vreme querirka laudantium create chemical changes that occur naturally in your body.
+                                li
+                                    | Quis autem vel eum iurea reprehenderit qui in eavoltu healthy diet, and allowing yourself to take breaks.
+                            h3
+                                | To Design Is To Solve Human Problems By Identifying Them And Executing The Best Solution
+                            p
+                                | Dinner usually refers to the most significant and important meal of the day, which can be the noon or the evening meal. It may mean a meal of any size eaten at any time of dayqui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham non numquam.
+                        .blog-item-more
+                            span.readmore
+                                | Tags: 
+                                a(href='') Food,
+                                a(href='') Cereals,
+                                a(href='') Others
+                            span.like.float-xs-right
+                                b 10
+                                |  Likes
+                    .comment
+                        h3.comment-title Comments (3)
+                        .comment-box
+                            .comment-box-image
+                                img.img-fluid(src='../images/author-3.jpg', alt='')
+                            .comment-box-content
+                                .name-title.clearfix
+                                    .name.float-xs-left Billu Manson
+                                    .date.float-xs-right
+                                        | June 25, 2016
+                                        a(href='')
+                                            span.reply
+                                                | Reply 
+                                                i.fa.fa-long-arrow-down
+                                span.comment-text
+                                    | Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        .comment-box
+                            .comment-box-image
+                                img.img-fluid(src='../images/author-3.jpg', alt='')
+                            .comment-box-content
+                                .name-title.clearfix
+                                    .name.float-xs-left Billu Manson
+                                    .date.float-xs-right
+                                        | June 25, 2016
+                                        a(href='')
+                                            span.reply
+                                                | Reply 
+                                                i.fa.fa-long-arrow-down
+                                span.comment-text
+                                    | Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        .comment-box
+                            .comment-box-image
+                                img.img-fluid(src='../images/author-3.jpg', alt='')
+                            .comment-box-content
+                                .name-title.clearfix
+                                    .name.float-xs-left Billu Manson
+                                    .date.float-xs-right
+                                        | June 25, 2016
+                                        a(href='')
+                                            span.reply
+                                                | Reply 
+                                                i.fa.fa-long-arrow-down
+                                span.comment-text
+                                    | Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    .commentform.wow.fadeInUp.animated(data-wow-duration='2s')
+                        h3.commentform-title Leave a Comment
+                        form(action='post.html', method='post')
+                            .row
+                                .col-xs-12.col-lg-6
+                                    fieldset.form-group
+                                        label(for='name')
+                                            | Name 
+                                            span *
+                                        input#name.form-control(type='text')
+                                    fieldset.form-group
+                                        label(for='mail')
+                                            | Email
+                                            span *
+                                        input#mail.form-control(type='text')
+                                    fieldset.form-group
+                                        label(for='phone')
+                                            | Phone number
+                                            span *
+                                        input#phone.form-control(type='text')
+                                .col-xs-12.col-lg-6
+                                    fieldset.form-group
+                                        label(for='comments') Comment
+                                        textarea#comments.form-control
+                                    button.button-reservation(type='submit') Post Comment
+                aside.sidebar.col-xs-12.col-sm-12.col-md-4.col-lg-3
+                    .row
+                        .search.col-xs-12
+                            form(action='blog.html', method='post')
+                                input.form-control(type='text', placeholder='Search Product', name='search')
+                                button(type='submit')
+                                    i.fa.fa-search
+                        .categories.col-xs-12.col-sm-3.col-md-12.wow.fadeInUp.animated(data-wow-duration='2s')
+                            h3.title Categories
+                            ul
+                                li
+                                    a(href='') Healthy Food
+                                li
+                                    a(href='') Super Burger
+                                li
+                                    a(href='') Home Special
+                                li
+                                    a(href='') Desserts
+                        .toprated.col-xs-12.col-sm-6.col-md-12.wow.fadeInUp.animated(data-wow-duration='2s')
+                            h3.title Top Rated
+                            .toprated-box
+                                .box-image
+                                    a(href='product.html')
+                                        img.img-fluid(src='../images/post-thumb-4.jpg', alt='')
+                                .box-title
+                                    span.name
+                                        a(href='product.html') Mexican Cuisine
+                                    .price
+                                        span.price-main $ 90.00
+                                        span.price-sale $ 100.00
+                            .toprated-box
+                                .box-image
+                                    a(href='product.html')
+                                        img.img-fluid(src='../images/post-thumb-5.jpg', alt='')
+                                .box-title
+                                    span.name
+                                        a(href='product.html') Chicken Caesar
+                                    .price
+                                        span.price-main $ 90.00
+                                        span.price-sale $ 100.00
+                            .toprated-box
+                                .box-image
+                                    a(href='product.html')
+                                        img.img-fluid(src='../images/post-thumb-6.jpg', alt='')
+                                .box-title
+                                    span.name
+                                        a(href='product.html') Mexican Cuisine
+                                    .price
+                                        span.price-main $ 90.00
+                                        span.price-sale $ 100.00
+                        .categories.col-xs-12.col-sm-3.col-md-12.wow.fadeInUp.animated(data-wow-duration='2s')
+                            h3.title Archives
+                            ul
+                                li
+                                    a(href='') June 2016
+                                li
+                                    a(href='') June 2016
+                                li
+                                    a(href='') June 2016
+                                li
+                                    a(href='') June 2016

@@ -1,19 +1,79 @@
-extends _layouts/home
-
-block head_end
-    //-vendor css
-    link(href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-    //- style css
-    link(href="/css/style.css" rel="stylesheet")
-
-block content
-    include _partials/header
-    include _partials/back-top
-    include _components/contact
-    include _partials/footer
-
-block body_end
-    script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='lib/jquery/jquery.min.js')
-    script(src='lib/wowjs/wow.min.js')
-    script(src="js/script.js" type="text/javascript")
+section#contactpage
+    section.contact-us
+        .container
+            .row.clearfix
+                .col-xs-12.col-md-6.wow.fadeInLeft.animated(data-wow-duration='1000')
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3887290646157!2d105.84815311450916!3d21.017126493552194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8d12b78709%3A0x346fd69965f32fb7!2zMTExIFRyaeG7h3UgVmnhu4d0IFbGsMahbmcsIELDuWkgVGjhu4sgWHXDom4sIEhvw6BuIEtp4bq_bSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1510279748848', width='600', height='450', style='border:0', allowfullscreen='')
+                .col-xs-12.col-md-6
+                    .sale-intro
+                        .sale-intro-title Send A Message
+                        .sale-intro-text Leave A Message Here
+                    form
+                        .row
+                            fieldset.col-xs-12.col-md-6.form-group
+                                input.form-control(type='text', placeholder='Name')
+                            fieldset.col-xs-12.col-md-6.form-group
+                                input.form-control(type='text', placeholder='Email')
+                            fieldset.col-xs-12.col-md-6.form-group
+                                input.form-control(type='text', placeholder='Phone')
+                            fieldset.col-xs-12.col-md-6.form-group
+                                input.form-control(type='text', placeholder='Website')
+                            fieldset.col-xs-12.form-group
+                                textarea.form-control(placeholder='Your Need & Description')
+                            fieldset.col-xs-12.form-group
+                                input.form-control(type='submit', value='Send message')
+    article.menu-intro
+        h2.menu-intro-title Thanks For Visit Us
+        h4.menu-intro-text We Make Stay Fresh Food & Wounderful View
+    section.location
+        .sale-intro.text-xs-center
+            .sale-intro-title Our Special Dishes.
+            .sale-intro-text We Create Delicous Memory
+        .location-box
+            .container
+                .row
+                    .col-xs-12.col-md-4
+                        .location-box-image
+                            img.img-fluid(src='../images/branch-1.jpg', alt='')
+                        address.topfooter-col1-address
+                            div
+                                i.fa.fa-paper-plane-o
+                                span Address : 44 New Design Street, Melbourne 005
+                            div
+                                i.fa.fa-phone
+                                span Phone : (01) 800 433 633
+                            div
+                                i.fa.fa-envelope-o
+                                span Email : info@Example.com
+                        h5
+                            a(href='') Get Direction
+                    .col-xs-12.col-md-4
+                        .location-box-image
+                            img.img-fluid(src='../images/branch-2.jpg', alt='')
+                        address.topfooter-col1-address
+                            div
+                                i.fa.fa-paper-plane-o
+                                span Address : 44 New Design Street, Melbourne 005
+                            div
+                                i.fa.fa-phone
+                                span Phone : (01) 800 433 633
+                            div
+                                i.fa.fa-envelope-o
+                                span Email : info@Example.com
+                        h5
+                            a(href='') Get Direction
+                    .col-xs-12.col-md-4
+                        .location-box-image
+                            img.img-fluid(src='../images/branch-3.jpg', alt='')
+                        address.topfooter-col1-address
+                            div
+                                i.fa.fa-paper-plane-o
+                                span Address : 44 New Design Street, Melbourne 005
+                            div
+                                i.fa.fa-phone
+                                span Phone : (01) 800 433 633
+                            div
+                                i.fa.fa-envelope-o
+                                span Email : info@Example.com
+                        h5
+                            a(href='') Get Direction
