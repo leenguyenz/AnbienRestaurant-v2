@@ -27,7 +27,6 @@ npm manifest:
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
-      "bootstrap": "^4.0.0-alpha.6",
       "browser-sync": "^2.24.4",
       "gulp": "^3.9.1",
       "gulp-autoprefixer": "^5.0.0",
@@ -40,7 +39,9 @@ npm manifest:
       "gulp-uglify": "^3.0.0",
       "path": "^0.12.7"
     },
-    "dependencies": {},
+    "dependencies": {
+      "bootstrap": "4.0.0-alpha.5"
+    },
     "repository": {
       "type": "git",
       "url": "https://github.com/leenguyenz/AnbienRestaurant-v2.git"
@@ -534,9 +535,12 @@ Lockfile:
     dependencies:
       hoek "4.x.x"
   
-  bootstrap@^4.0.0-alpha.6:
-    version "4.1.1"
-    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
+  bootstrap@4.0.0-alpha.5:
+    version "4.0.0-alpha.5"
+    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-alpha.5.tgz#a126b648c3bd2f52b8fad4bbc5e2d0ad2abf7064"
+    dependencies:
+      jquery "1.9.1 - 3"
+      tether "^1.3.7"
   
   brace-expansion@^1.0.0, brace-expansion@^1.1.7:
     version "1.1.11"
@@ -2888,6 +2892,10 @@ Lockfile:
       bin-wrapper "^3.0.0"
       logalot "^2.0.0"
   
+  "jquery@1.9.1 - 3":
+    version "3.3.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  
   js-base64@^2.1.8:
     version "2.4.5"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.5.tgz#e293cd3c7c82f070d700fc7a1ca0a2e69f101f92"
@@ -4887,6 +4895,10 @@ Lockfile:
     dependencies:
       temp-dir "^1.0.0"
       uuid "^3.0.1"
+  
+  tether@^1.3.7:
+    version "1.4.4"
+    resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.4.tgz#9dc6eb2b3e601da2098fd264e7f7a8b264de1125"
   
   tfunk@^3.0.1:
     version "3.1.0"
