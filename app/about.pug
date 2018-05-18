@@ -3,15 +3,16 @@ extends _layouts/home
 block head_end
     //-vendor css
     link(href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet")
-
+    link(href="lib/animatecss/animate.css" rel="stylesheet")
     //- style css
     link(href="/css/style.css" rel="stylesheet")
 
 block content
-    include _partials/header
-    include _partials/back-top
-    include _components/about
-    include _partials/footer
+    #aboutpage
+        include _partials/header
+        include _partials/back-top
+        include _components/about
+        include _partials/footer
 
 block body_end
     script(src='lib/bootstrap/js/bootstrap.min.js')

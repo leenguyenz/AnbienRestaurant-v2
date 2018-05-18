@@ -748,6 +748,7 @@
 .topfooter{
     padding:100px 0;
     background:$bg-color-topheader;
+    overflow: hidden;
     &-col1{
         margin-bottom: 15px;
         p{margin:10px 0 20px 0}

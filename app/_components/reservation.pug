@@ -1,75 +1,74 @@
-section#reservationpage
-    section.tablebooking
-        article.tablebooking-info
-            .container
-                .row
-                    .col-xs-12.col-sm-10.push-sm-1.col-md-8.push-md-2.col-lg-6.push-lg-3.text-xs-center
-                        .sale-intro.text-xs-center
-                            h2.sale-intro-title Booking a table online is easy
-                            h3.sale-intro-text Make A Reservation
+section.tablebooking
+    article.tablebooking-info
+        .container
+            .row
+                .col-xs-12.col-sm-10.push-sm-1.col-md-8.push-md-2.col-lg-6.push-lg-3.text-xs-center
+                    .sale-intro.text-xs-center
+                        h2.sale-intro-title Booking a table online is easy
+                        h3.sale-intro-text Make A Reservation
+                    p
+                        | Booking a table has never been so easy with free & instant online restaurant reservations, booking now!!
+                    p
+                        | Monday to Friday 9:00 am - 23:00 pm Saturday to Sunday 10:00 am - 22:00 pm Note: An Bien Restaurant is closed on holidays.
+                    h3.contact 0844.335.1211
+    article.reservation-form.wow.fadeInUp.animated(data-wow-duration='2s')
+        h2.reservation-form-title Book Your Table Online
+        .container
+            .row
+                .col-xs-12.col-lg-10.push-lg-1
+                    form(action='reservation.html', method='post')
+                        .row
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='text', placeholder='Your Name *')
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='email', placeholder='Your Email *')
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='number', placeholder='Mobile Number *')
+                                i.fa.fa-mobile
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='text', placeholder='Date *')
+                                i.fa.fa-calendar
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='text', placeholder='Time *')
+                                i.fa.fa-clock-o
+                            .col-xs-12.col-md-6.col-lg-4.form-group
+                                input.form-control(type='text', placeholder='No. of Persons *')
+                                i.fa.fa-user
+                            .col-xs-12.text-xs-center
+                                input.button-reservation(type='submit', value='Book Now')
+article.reservation
+    .reservation-intro.text-xs-center
+        h2.reservation-intro-title Enjoy Pleasant Pastime With Friends and Partners
+        h3.reservation-intro-text Relaxing Atmosphere
+section.about-us
+    article.about-intro
+        .container
+            .row
+                .col-xs-12.col-md-6
+                    .sale-intro
+                        .sale-intro-title Gorgeous Halls
+                        .sale-intro-text
+                            a(href='post.html') Find Perfect Place For Any Meeting 
                         p
-                            | Booking a table has never been so easy with free & instant online restaurant reservations, booking now!!
+                            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            | nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in
+                            | reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        h4 Seat Up 155 Company Meatings
                         p
-                            | Monday to Friday 9:00 am - 23:00 pm Saturday to Sunday 10:00 am - 22:00 pm Note: Arctica Restaurant is closed on holidays.
-                        h3.contact 0844.335.1211
-        article.reservation-form.wow.fadeInUp.animated(data-wow-duration='2s')
-            h2.reservation-form-title Book Your Table Online
-            .container
-                .row
-                    .col-xs-12.col-lg-10.push-lg-1
-                        form(action='reservation.html', method='post')
-                            .row
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='text', placeholder='Your Name *')
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='email', placeholder='Your Email *')
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='number', placeholder='Mobile Number *')
-                                    i.fa.fa-mobile
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='text', placeholder='Date *')
-                                    i.fa.fa-calendar
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='text', placeholder='Time *')
-                                    i.fa.fa-clock-o
-                                .col-xs-12.col-md-6.col-lg-4.form-group
-                                    input.form-control(type='text', placeholder='No. of Persons *')
-                                    i.fa.fa-user
-                                .col-xs-12.text-xs-center
-                                    input.button-reservation(type='submit', value='Book Now')
-    article.reservation
-        .reservation-intro.text-xs-center
-            h2.reservation-intro-title Enjoy Pleasant Pastime With Friends and Partners
-            h3.reservation-intro-text Relaxing Atmosphere
-    section.about-us
-        article.about-intro
-            .container
-                .row
-                    .col-xs-12.col-md-6
-                        .sale-intro
-                            .sale-intro-title Gorgeous Halls
-                            .sale-intro-text
-                                a(href='post.html') Find Perfect Place For Any Meeting 
-                            p
-                                | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                | nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in
-                                | reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            h4 Seat Up 155 Company Meatings
-                            p
-                                | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                | Ut enim ad minim veniam, quis nostrud exercitation
-                            h4 Traditional Home hall
-                            p
-                                | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                | Ut enim ad minim veniam, quis nostrud exercitation
-                            a.button-reservation(href='post.html') readmore
-                    .col-xs-12.col-md-6
-                        .image-holder
-                            .row.clearfix
-                                figure.col-xs-6
-                                    img.img-fluid(src='../images/meeting-1.jpg', alt='')
-                                figure.col-xs-6
-                                    img.img-fluid(src='../images/meeting-2.jpg', alt='')
-    // main
-    // aboutpage
+                            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            | Ut enim ad minim veniam, quis nostrud exercitation
+                        h4 Traditional Home hall
+                        p
+                            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            | Ut enim ad minim veniam, quis nostrud exercitation
+                        a.button-reservation(href='post.html') readmore
+                .col-xs-12.col-md-6
+                    .image-holder
+                        .row.clearfix
+                            figure.col-xs-6
+                                img.img-fluid(src='../images/meeting-1.jpg', alt='')
+                            figure.col-xs-6
+                                img.img-fluid(src='../images/meeting-2.jpg', alt='')
+// main
+// aboutpage
